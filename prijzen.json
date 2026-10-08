@@ -1,0 +1,1205 @@
+{
+ "updated": "2026-10-08",
+ "week": "5 t/m 11 okt",
+ "bron": "Checkjebon (open data)",
+ "stores": {
+  "ah": {
+   "ui": {
+    "price": 0.99,
+    "size": 1000.0,
+    "label": "AH Gele uien"
+   },
+   "tomaat": {
+    "price": 1.55,
+    "size": 500.0,
+    "label": "AH Tomaten"
+   },
+   "cherrytomaat": {
+    "price": 1.05,
+    "size": 250.0,
+    "label": "AH Cherrytomaten"
+   },
+   "paprika": {
+    "price": 1.99,
+    "size": 3.0,
+    "label": "AH Paprika mix"
+   },
+   "wortel": {
+    "price": 1.05,
+    "size": 1000.0,
+    "label": "AH Winterpeen"
+   },
+   "champignon": {
+    "price": 1.09,
+    "size": 250.0,
+    "label": "AH Witte champignons"
+   },
+   "broccoli": {
+    "price": 1.05,
+    "size": 500.0,
+    "label": "AH Broccoli"
+   },
+   "bloemkool": {
+    "price": 1.49,
+    "size": 450.0,
+    "label": "AH Bloemkoolroosjes"
+   },
+   "sperzieboon": {
+    "price": 2.29,
+    "size": 400.0,
+    "label": "AH Sperziebonen"
+   },
+   "aardappel": {
+    "price": 1.55,
+    "size": 1000.0,
+    "label": "AH Vastkokende aardappelen"
+   },
+   "zoeteaardappel": {
+    "price": 1.59,
+    "size": 450.0,
+    "label": "AH Zoete aardappelblokjes"
+   },
+   "komkommer": {
+    "price": 0.85,
+    "size": 1.0,
+    "label": "AH Komkommer"
+   },
+   "slamix": {
+    "price": 1.49,
+    "size": 300.0,
+    "label": "AH Salademix"
+   },
+   "prei": {
+    "price": 2.09,
+    "size": 400.0,
+    "label": "AH Prei"
+   },
+   "citroen": {
+    "price": 0.69,
+    "size": 1.0,
+    "label": "AH Citroen"
+   },
+   "roerbakmix": {
+    "price": 1.49,
+    "size": 450.0,
+    "label": "AH Roerbakgroente Hollands"
+   },
+   "boerenkool": {
+    "price": 2.19,
+    "size": 500.0,
+    "label": "AH Boerenkool grootverpakking"
+   },
+   "banaan": {
+    "price": 1.89,
+    "size": 5.0,
+    "label": "Chiquita Later lekker bananen"
+   },
+   "appel": {
+    "price": 3.49,
+    "size": 4.0,
+    "label": "Kanzi schaal"
+   },
+   "blauwebessen": {
+    "price": 3.19,
+    "size": 150.0,
+    "label": "AH Blauwe bessen"
+   },
+   "avocado": {
+    "price": 2.99,
+    "size": 2.0,
+    "label": "AH Avocado eetrijp"
+   },
+   "kipfilet": {
+    "price": 9.99,
+    "size": 800.0,
+    "label": "AH Scharrel kipfilet"
+   },
+   "gehakt": {
+    "price": 6.49,
+    "size": 500.0,
+    "label": "AH Rundergehakt"
+   },
+   "rookworst": {
+    "price": 2.99,
+    "size": 250.0,
+    "label": "AH Rookworst"
+   },
+   "zalm": {
+    "price": 4.59,
+    "size": 250.0,
+    "label": "AH Zalmfilet"
+   },
+   "gerooktezalm": {
+    "price": 4.59,
+    "size": 100.0,
+    "label": "AH Gerookte zalm"
+   },
+   "ei": {
+    "price": 3.79,
+    "size": 10.0,
+    "label": "AH Verse scharreleieren S M"
+   },
+   "melk": {
+    "price": 1.29,
+    "size": 1000.0,
+    "label": "AH Halfvolle melk"
+   },
+   "haverdrink": {
+    "price": 1.39,
+    "size": 1000.0,
+    "label": "AH Terra Plantaardige haverdrink ongezoet"
+   },
+   "kookroom": {
+    "price": 0.99,
+    "size": 250.0,
+    "label": "AH Kookroom"
+   },
+   "feta": {
+    "price": 2.35,
+    "size": 200.0,
+    "label": "AH Griekse feta"
+   },
+   "mozzarella": {
+    "price": 0.99,
+    "size": 200.0,
+    "label": "AH Mozzarella"
+   },
+   "kwark": {
+    "price": 1.49,
+    "size": 500.0,
+    "label": "AH Magere kwark"
+   },
+   "cottage": {
+    "price": 1.39,
+    "size": 200.0,
+    "label": "AH Cottage cheese naturel"
+   },
+   "tofu": {
+    "price": 1.35,
+    "size": 325.0,
+    "label": "AH Terra Biologische tofu"
+   },
+   "stokbrood": {
+    "price": 2.29,
+    "size": 250.0,
+    "label": "AH Robuust bruine demi baguettes"
+   },
+   "pasta": {
+    "price": 0.85,
+    "size": 500.0,
+    "label": "AH Penne"
+   },
+   "volkorenpasta": {
+    "price": 1.89,
+    "size": 550.0,
+    "label": "Honig Spaghetti volkoren"
+   },
+   "rijst": {
+    "price": 2.39,
+    "size": 1000.0,
+    "label": "AH Basmatirijst"
+   },
+   "zilvervliesrijst": {
+    "price": 1.49,
+    "size": 1000.0,
+    "label": "AH Zilvervliesrijst"
+   },
+   "mie": {
+    "price": 0.89,
+    "size": 250.0,
+    "label": "Soubry Chinese mie"
+   },
+   "couscous": {
+    "price": 1.29,
+    "size": 400.0,
+    "label": "AH Couscous"
+   },
+   "rodelinzen": {
+    "price": 1.99,
+    "size": 500.0,
+    "label": "AH Terra Biologisch rode linzen"
+   },
+   "spliterwten": {
+    "price": 2.39,
+    "size": 500.0,
+    "label": "Hak Spliterwten gedroogd"
+   },
+   "havermout": {
+    "price": 0.75,
+    "size": 500.0,
+    "label": "AH Volkoren havermout fijne vlokken"
+   },
+   "walnoten": {
+    "price": 2.99,
+    "size": 200.0,
+    "label": "AH Terra Walnoten ongebrand"
+   },
+   "tomatenblokjes": {
+    "price": 0.59,
+    "size": 400.0,
+    "label": "AH Tomatenblokjes"
+   },
+   "tomatenpuree": {
+    "price": 0.49,
+    "size": 70.0,
+    "label": "AH Tomatenpuree"
+   },
+   "kidneybonen": {
+    "price": 0.49,
+    "size": 200.0,
+    "label": "AH Terra Kidneybonen"
+   },
+   "kikkererwten": {
+    "price": 0.85,
+    "size": 200.0,
+    "label": "AH Terra Kikkererwten"
+   },
+   "linzen": {
+    "price": 0.89,
+    "size": 200.0,
+    "label": "AH Terra Linzen"
+   },
+   "mais": {
+    "price": 1.19,
+    "size": 340.0,
+    "label": "AH Maiskorrels fris en knapperig"
+   },
+   "kokosmelk": {
+    "price": 2.39,
+    "size": 400.0,
+    "label": "Go-Tan Kokosmelk"
+   },
+   "tonijn": {
+    "price": 1.94,
+    "size": 145.0,
+    "label": "Princes Tonijnstukken in water"
+   },
+   "pindakaas": {
+    "price": 2.49,
+    "size": 350.0,
+    "label": "AH Smeuïge pindakaas"
+   },
+   "ketjap": {
+    "price": 1.49,
+    "size": 500.0,
+    "label": "AH Ketjap manis"
+   },
+   "sojasaus": {
+    "price": 1.89,
+    "size": 250.0,
+    "label": "AH Sojasaus"
+   },
+   "pesto": {
+    "price": 1.15,
+    "size": 190.0,
+    "label": "AH Groene pesto"
+   },
+   "hummus": {
+    "price": 1.39,
+    "size": 200.0,
+    "label": "AH Terra Plantaardige hummus naturel"
+   },
+   "honing": {
+    "price": 1.75,
+    "size": 350.0,
+    "label": "AH Honing"
+   },
+   "spinazie": {
+    "price": 1.15,
+    "size": 750.0,
+    "label": "AH Spinazie"
+   },
+   "garnalen": {
+    "price": 5.49,
+    "size": 200.0,
+    "label": "AH Garnalen"
+   }
+  },
+  "hoogvliet": {
+   "tomaat": {
+    "price": 1.39,
+    "size": 500.0,
+    "label": "Hoogvliet Trostomaten"
+   },
+   "cherrytomaat": {
+    "price": 3.79,
+    "size": 400.0,
+    "label": "Tasty Cherry pruim tros tomaten"
+   },
+   "paprika": {
+    "price": 1.95,
+    "size": 3.0,
+    "label": "Hoogvliet Paprika mix"
+   },
+   "wortel": {
+    "price": 1.09,
+    "size": 500.0,
+    "label": "Hoogvliet Hollandse worteltjes"
+   },
+   "champignon": {
+    "price": 1.29,
+    "size": 250.0,
+    "label": "Hoogvliet Champignons"
+   },
+   "broccoli": {
+    "price": 1.29,
+    "size": 500.0,
+    "label": "Hoogvliet Broccoli"
+   },
+   "bloemkool": {
+    "price": 1.9,
+    "size": 800.0,
+    "label": "G'woon Bloemkool"
+   },
+   "sperzieboon": {
+    "price": 1.69,
+    "size": 500.0,
+    "label": "Hoogvliet Sperziebonen"
+   },
+   "zoeteaardappel": {
+    "price": 1.45,
+    "size": 500.0,
+    "label": "Hoogvliet Zoete aardappelen"
+   },
+   "komkommer": {
+    "price": 0.85,
+    "size": 1.0,
+    "label": "Hoogvliet Komkommer"
+   },
+   "slamix": {
+    "price": 1.69,
+    "size": 125.0,
+    "label": "Hoogvliet Gemengde sla"
+   },
+   "prei": {
+    "price": 1.19,
+    "size": 500.0,
+    "label": "Hoogvliet Prei"
+   },
+   "pompoen": {
+    "price": 2.49,
+    "size": 400.0,
+    "label": "Hoogvliet Pompoenblokjes"
+   },
+   "roerbakmix": {
+    "price": 1.45,
+    "size": 450.0,
+    "label": "G'woon Hollandse roerbakgroenten"
+   },
+   "boerenkool": {
+    "price": 2.29,
+    "size": 500.0,
+    "label": "Hoogvliet Boerenkool fijn"
+   },
+   "blauwebessen": {
+    "price": 2.09,
+    "size": 250.0,
+    "label": "G'woon Blauwe bessen"
+   },
+   "avocado": {
+    "price": 2.99,
+    "size": 4.0,
+    "label": "Eat Me Avocado"
+   },
+   "kipfilet": {
+    "price": 7.49,
+    "size": 600.0,
+    "label": "Hoogvliet Kipfilet"
+   },
+   "gehakt": {
+    "price": 4.79,
+    "size": 500.0,
+    "label": "Hoogvliet Rundergehakt"
+   },
+   "rookworst": {
+    "price": 1.49,
+    "size": 275.0,
+    "label": "G'woon Gelderse rookworst"
+   },
+   "stoofvlees": {
+    "price": 8.07,
+    "size": 505.0,
+    "label": "Hoogvliet Riblappen"
+   },
+   "zalm": {
+    "price": 4.35,
+    "size": 250.0,
+    "label": "Vis Marine Zalmfilets"
+   },
+   "gerooktezalm": {
+    "price": 4.49,
+    "size": 100.0,
+    "label": "Vismarine Gerookte Noorse zalm"
+   },
+   "ei": {
+    "price": 3.55,
+    "size": 10.0,
+    "label": "Scharreleieren maat m/l bruin"
+   },
+   "haverdrink": {
+    "price": 1.35,
+    "size": 1000.0,
+    "label": "Melkan Haverdrink original"
+   },
+   "kookroom": {
+    "price": 0.89,
+    "size": 250.0,
+    "label": "Melkan Schenkbare kookroom"
+   },
+   "feta": {
+    "price": 2.35,
+    "size": 200.0,
+    "label": "Melkan Griekse feta"
+   },
+   "mozzarella": {
+    "price": 1.8,
+    "size": 125.0,
+    "label": "Melkan Mozzarella"
+   },
+   "kwark": {
+    "price": 0.99,
+    "size": 500.0,
+    "label": "Oing Magere kwark naturel"
+   },
+   "cottage": {
+    "price": 0.98,
+    "size": 200.0,
+    "label": "Melkan Cottage cheese"
+   },
+   "tofu": {
+    "price": 2.19,
+    "size": 450.0,
+    "label": "Vivera Tofu"
+   },
+   "wraps": {
+    "price": 2.25,
+    "size": 6.0,
+    "label": "Santa Maria Tortilla wraps large 6 stuks 371g"
+   },
+   "pasta": {
+    "price": 0.89,
+    "size": 500.0,
+    "label": "G'woon Penne rigate"
+   },
+   "volkorenpasta": {
+    "price": 0.78,
+    "size": 500.0,
+    "label": "G'woon Macaroni volkoren"
+   },
+   "rijst": {
+    "price": 1.43,
+    "size": 400.0,
+    "label": "G'woon Basmati rijst"
+   },
+   "mie": {
+    "price": 1.18,
+    "size": 500.0,
+    "label": "G'woon Mie nestjes"
+   },
+   "couscous": {
+    "price": 2.15,
+    "size": 400.0,
+    "label": "Smaakt Couscous volkoren"
+   },
+   "rodelinzen": {
+    "price": 1.99,
+    "size": 500.0,
+    "label": "Valle del sole Rode linzen"
+   },
+   "spliterwten": {
+    "price": 1.15,
+    "size": 500.0,
+    "label": "Valle del sole Spliterwten"
+   },
+   "havermout": {
+    "price": 0.74,
+    "size": 500.0,
+    "label": "Molina Havermout vlokken"
+   },
+   "walnoten": {
+    "price": 2.55,
+    "size": 200.0,
+    "label": "G'woon Walnoten ongebrand"
+   },
+   "tomatenblokjes": {
+    "price": 0.68,
+    "size": 400.0,
+    "label": "G'woon Tomatenblokjes"
+   },
+   "tomatenpuree": {
+    "price": 0.3,
+    "size": 70.0,
+    "label": "G'woon Tomatenpuree"
+   },
+   "kidneybonen": {
+    "price": 0.47,
+    "size": 200.0,
+    "label": "G'woon Kidneybonen"
+   },
+   "kikkererwten": {
+    "price": 1.09,
+    "size": 410.0,
+    "label": "G'woon Kikkererwten"
+   },
+   "linzen": {
+    "price": 1.91,
+    "size": 310.0,
+    "label": "Bonduelle Linzen"
+   },
+   "mais": {
+    "price": 1.19,
+    "size": 300.0,
+    "label": "G'woon Maiskorrels"
+   },
+   "kokosmelk": {
+    "price": 1.32,
+    "size": 400.0,
+    "label": "Sum & Sam Kokosmelk"
+   },
+   "tonijn": {
+    "price": 1.35,
+    "size": 160.0,
+    "label": "Statesman Tonijnstukken in water"
+   },
+   "pindakaas": {
+    "price": 1.55,
+    "size": 350.0,
+    "label": "G'woon Pindakaas"
+   },
+   "ketjap": {
+    "price": 1.2,
+    "size": 250.0,
+    "label": "Sum & Sam Ketjap manis"
+   },
+   "sojasaus": {
+    "price": 1.13,
+    "size": 150.0,
+    "label": "Sum & Sam Sojasaus"
+   },
+   "pesto": {
+    "price": 2.15,
+    "size": 180.0,
+    "label": "G'woon Groene pesto"
+   },
+   "hummus": {
+    "price": 1.39,
+    "size": 200.0,
+    "label": "G'woon Hummus naturel"
+   },
+   "honing": {
+    "price": 2.59,
+    "size": 350.0,
+    "label": "G'woon Acacia honing"
+   },
+   "spinazie": {
+    "price": 1.21,
+    "size": 500.0,
+    "label": "G'woon Spinazie grof gehakt"
+   },
+   "garnalen": {
+    "price": 2.49,
+    "size": 100.0,
+    "label": "Vis Marine Roze garnalen"
+   }
+  },
+  "jumbo": {
+   "ui": {
+    "price": 1.85,
+    "size": 2000.0,
+    "label": "Jumbo Gele Uien Extra Groot 2 kg"
+   },
+   "tomaat": {
+    "price": 1.79,
+    "size": 500.0,
+    "label": "Jumbo Tomaten 500g"
+   },
+   "cherrytomaat": {
+    "price": 0.99,
+    "size": 250.0,
+    "label": "Jumbo Cherry Tomaten 250 g"
+   },
+   "paprika": {
+    "price": 1.89,
+    "size": 3.0,
+    "label": "Jumbo Paprika Mix 3 Stuks"
+   },
+   "wortel": {
+    "price": 1.39,
+    "size": 1000.0,
+    "label": "Jumbo Wortelen 1 kg"
+   },
+   "champignon": {
+    "price": 1.09,
+    "size": 250.0,
+    "label": "Jumbo Fijne Champignons 250 g"
+   },
+   "broccoli": {
+    "price": 1.25,
+    "size": 500.0,
+    "label": "Jumbo Broccoli 500 g"
+   },
+   "bloemkool": {
+    "price": 1.85,
+    "size": 750.0,
+    "label": "Jumbo Bloemkool Roosjes Voordeelverpakking 750 g"
+   },
+   "sperzieboon": {
+    "price": 1.29,
+    "size": 400.0,
+    "label": "Jumbo Gebroken Sperziebonen 400 g"
+   },
+   "aardappel": {
+    "price": 1.29,
+    "size": 1000.0,
+    "label": "Jumbo Aardappelen Vastkokend 1 kg"
+   },
+   "zoeteaardappel": {
+    "price": 1.69,
+    "size": 450.0,
+    "label": "Jumbo Zoete Aardappelblokjes 450 g"
+   },
+   "komkommer": {
+    "price": 0.75,
+    "size": 1.0,
+    "label": "Jumbo Komkommer"
+   },
+   "prei": {
+    "price": 1.09,
+    "size": 200.0,
+    "label": "Jumbo Fijngesneden Prei 200g"
+   },
+   "citroen": {
+    "price": 1.59,
+    "size": 2.0,
+    "label": "Jumbo Biologisch Citroen 2 Stuks"
+   },
+   "roerbakmix": {
+    "price": 2.69,
+    "size": 400.0,
+    "label": "Jumbo Wokgroenten Oosters 400 g"
+   },
+   "boerenkool": {
+    "price": 0.99,
+    "size": 450.0,
+    "label": "Jumbo Boerenkool 450 g"
+   },
+   "banaan": {
+    "price": 1.69,
+    "size": 5.0,
+    "label": "Jumbo Dole Bananen 5 Stuks"
+   },
+   "appel": {
+    "price": 2.99,
+    "size": 4.0,
+    "label": "Tessa Appel 4 Stuks"
+   },
+   "blauwebessen": {
+    "price": 2.49,
+    "size": 125.0,
+    "label": "Jumbo Blauwe Bessen 125 g"
+   },
+   "avocado": {
+    "price": 1.35,
+    "size": 1.0,
+    "label": "Jumbo Avocado"
+   },
+   "kipfilet": {
+    "price": 8.28,
+    "size": 600.0,
+    "label": "Jumbo Kipfilet ca. 600g"
+   },
+   "kippendij": {
+    "price": 8.62,
+    "size": 750.0,
+    "label": "Jumbo Scharrelkip Kippendijfilet 750 g"
+   },
+   "gehakt": {
+    "price": 5.4,
+    "size": 500.0,
+    "label": "Jumbo Rundergehakt 500 g"
+   },
+   "rookworst": {
+    "price": 2.99,
+    "size": 275.0,
+    "label": "Jumbo Runder Rookworst 275 g"
+   },
+   "gerooktezalm": {
+    "price": 3.99,
+    "size": 90.0,
+    "label": "Jumbo Gerookte Zalm 90 g"
+   },
+   "ei": {
+    "price": 3.29,
+    "size": 12.0,
+    "label": "Scharreleieren 12 Stuks"
+   },
+   "melk": {
+    "price": 0.85,
+    "size": 1000.0,
+    "label": "Halfvolle Melk 1 L"
+   },
+   "haverdrink": {
+    "price": 1.35,
+    "size": 1000.0,
+    "label": "Jumbo Haverdrink Ongezoet 1 L"
+   },
+   "kookroom": {
+    "price": 0.99,
+    "size": 250.0,
+    "label": "Jumbo Kookroom 20% Vet 250 ml"
+   },
+   "kaas": {
+    "price": 2.69,
+    "size": 100.0,
+    "label": "Parrano Geraspte Kaas Originale"
+   },
+   "feta": {
+    "price": 1.89,
+    "size": 200.0,
+    "label": "Jumbo Feta Kaas 43+ Plak 200 g"
+   },
+   "mozzarella": {
+    "price": 0.87,
+    "size": 220.0,
+    "label": "Goldsteig Mozzarella Classic 220 g"
+   },
+   "kwark": {
+    "price": 1.05,
+    "size": 500.0,
+    "label": "Jumbo Franse Kwark Mager 500 g"
+   },
+   "cottage": {
+    "price": 0.79,
+    "size": 200.0,
+    "label": "Jumbo Cottage Cheese 200 g"
+   },
+   "tofu": {
+    "price": 2.19,
+    "size": 280.0,
+    "label": "Vivera Stevige Tofu 280 g"
+   },
+   "wraps": {
+    "price": 0.95,
+    "size": 6.0,
+    "label": "Jumbo Large Tortilla Naturel 6 Stuks"
+   },
+   "stokbrood": {
+    "price": 0.99,
+    "size": 300.0,
+    "label": "Jumbo - Baguette Volkoren - 2 Stuks"
+   },
+   "pasta": {
+    "price": 1.19,
+    "size": 500.0,
+    "label": "Ankara Penne Pasta 500g"
+   },
+   "volkorenpasta": {
+    "price": 1.95,
+    "size": 550.0,
+    "label": "Honig Macaroni Volkoren 550 g"
+   },
+   "rijst": {
+    "price": 1.39,
+    "size": 400.0,
+    "label": "Jumbo Basmati Rijst 400 g"
+   },
+   "zilvervliesrijst": {
+    "price": 1.15,
+    "size": 1000.0,
+    "label": "Jumbo Zilvervliesrijst Voordeelverpakking 1 kg"
+   },
+   "mie": {
+    "price": 1.49,
+    "size": 300.0,
+    "label": "Jumbo Roerbak Mie 300 g"
+   },
+   "couscous": {
+    "price": 1.39,
+    "size": 400.0,
+    "label": "Jumbo Durum Couscous 400 g"
+   },
+   "rodelinzen": {
+    "price": 1.59,
+    "size": 500.0,
+    "label": "Jumbo Gedroogde Rode Linzen 500 g"
+   },
+   "spliterwten": {
+    "price": 1.99,
+    "size": 500.0,
+    "label": "Jumbo Gedroogde Spliterwten 500 g"
+   },
+   "havermout": {
+    "price": 0.75,
+    "size": 500.0,
+    "label": "Jumbo Havermout Fijne Vlokken Volkoren 500 g"
+   },
+   "walnoten": {
+    "price": 2.59,
+    "size": 200.0,
+    "label": "Jumbo Ongebrande Walnoten 200 g"
+   },
+   "tomatenblokjes": {
+    "price": 1.69,
+    "size": 390.0,
+    "label": "Heinz Tomatenblokjes 390g"
+   },
+   "tomatenpuree": {
+    "price": 1.59,
+    "size": 140.0,
+    "label": "Mutti Tomatenpuree 140g"
+   },
+   "kidneybonen": {
+    "price": 0.99,
+    "size": 190.0,
+    "label": "Boon Kidney Boon 190 g"
+   },
+   "kikkererwten": {
+    "price": 0.99,
+    "size": 190.0,
+    "label": "Boon Kikkererwten 190 g"
+   },
+   "linzen": {
+    "price": 0.99,
+    "size": 190.0,
+    "label": "Boon Linzen 190 g"
+   },
+   "mais": {
+    "price": 1.19,
+    "size": 330.0,
+    "label": "Jumbo Maïskorrels 330 g"
+   },
+   "kokosmelk": {
+    "price": 2.19,
+    "size": 400.0,
+    "label": "Jumbo Kokosmelk 18% Vet 400 ml"
+   },
+   "tonijn": {
+    "price": 2.09,
+    "size": 160.0,
+    "label": "Jumbo Tonijnstukken in Water 160 g"
+   },
+   "pindakaas": {
+    "price": 1.19,
+    "size": 350.0,
+    "label": "Jumbo Pindakaas Naturel 350 g"
+   },
+   "ketjap": {
+    "price": 1.99,
+    "size": 250.0,
+    "label": "Conimex Ketjap Manis 250 ml"
+   },
+   "sojasaus": {
+    "price": 1.49,
+    "size": 150.0,
+    "label": "Jumbo Sojasaus 150 ml"
+   },
+   "pesto": {
+    "price": 1.15,
+    "size": 190.0,
+    "label": "Jumbo Pesto alla Genovese 190 g"
+   },
+   "hummus": {
+    "price": 2.59,
+    "size": 200.0,
+    "label": "Jumbo Hummus Naturel 200 g"
+   },
+   "honing": {
+    "price": 2.75,
+    "size": 350.0,
+    "label": "Jumbo Biologisch Honing Vloeibaar 350 g"
+   },
+   "spinazie": {
+    "price": 0.79,
+    "size": 450.0,
+    "label": "Jumbo Gehakte Spinazie 450 g"
+   },
+   "garnalen": {
+    "price": 4.99,
+    "size": 225.0,
+    "label": "Jumbo Garnalen 225 g"
+   }
+  },
+  "lidl": {
+   "ui": {
+    "price": 0.89,
+    "size": 1000.0,
+    "label": "Uien geel 1kg"
+   },
+   "tomaat": {
+    "price": 1.69,
+    "size": 1000.0,
+    "label": "Tomaten"
+   },
+   "cherrytomaat": {
+    "price": 0.99,
+    "size": 250.0,
+    "label": "Cherrytomaten"
+   },
+   "paprika": {
+    "price": 0.89,
+    "size": 1,
+    "label": "Paprika rood"
+   },
+   "courgette": {
+    "price": 0.79,
+    "size": 350,
+    "label": "Courgette"
+   },
+   "wortel": {
+    "price": 1.29,
+    "size": 1000.0,
+    "label": "Wortels"
+   },
+   "champignon": {
+    "price": 1.15,
+    "size": 250.0,
+    "label": "Champignons"
+   },
+   "broccoli": {
+    "price": 2.29,
+    "size": 400.0,
+    "label": "Broccoliroosjes"
+   },
+   "bloemkool": {
+    "price": 2.29,
+    "size": 400.0,
+    "label": "Bloemkoolroosjes"
+   },
+   "sperzieboon": {
+    "price": 1.49,
+    "size": 500.0,
+    "label": "Sperziebonen"
+   },
+   "aardappel": {
+    "price": 4.39,
+    "size": 3000.0,
+    "label": "Aardappelen"
+   },
+   "komkommer": {
+    "price": 0.75,
+    "size": 1,
+    "label": "Komkommer"
+   },
+   "slamix": {
+    "price": 1.39,
+    "size": 300.0,
+    "label": "Salademix"
+   },
+   "prei": {
+    "price": 0.59,
+    "size": 300,
+    "label": "Prei"
+   },
+   "roerbakmix": {
+    "price": 2.29,
+    "size": 600.0,
+    "label": "Roerbakgroenten 1"
+   },
+   "boerenkool": {
+    "price": 1.99,
+    "size": 500.0,
+    "label": "Boerenkool"
+   },
+   "blauwebessen": {
+    "price": 1.99,
+    "size": 125.0,
+    "label": "Blauwe bessen 125g"
+   },
+   "avocado": {
+    "price": 1.29,
+    "size": 1,
+    "label": "Avocado"
+   },
+   "kipfilet": {
+    "price": 8.99,
+    "size": 1000.0,
+    "label": "Kipfilet"
+   },
+   "gehakt": {
+    "price": 4.69,
+    "size": 300.0,
+    "label": "Rundergehakt"
+   },
+   "rookworst": {
+    "price": 1.33,
+    "size": 275.0,
+    "label": "Gelderse rookworst"
+   },
+   "stoofvlees": {
+    "price": 9.99,
+    "size": 500.0,
+    "label": "Stoofvlees"
+   },
+   "zalm": {
+    "price": 4.99,
+    "size": 250.0,
+    "label": "Zalmfilet ASC"
+   },
+   "ei": {
+    "price": 3.73,
+    "size": 12.0,
+    "label": "Scharreleieren 12st."
+   },
+   "haverdrink": {
+    "price": 1.35,
+    "size": 1000.0,
+    "label": "Haverdrink 1,8%"
+   },
+   "kookroom": {
+    "price": 0.98,
+    "size": 250.0,
+    "label": "Kookroom"
+   },
+   "feta": {
+    "price": 2.29,
+    "size": 200.0,
+    "label": "Feta"
+   },
+   "mozzarella": {
+    "price": 0.88,
+    "size": 125.0,
+    "label": "Mozzarella"
+   },
+   "yoghurt": {
+    "price": 1.79,
+    "size": 500.0,
+    "label": "Griekse yoghurt"
+   },
+   "kwark": {
+    "price": 1.69,
+    "size": 1000.0,
+    "label": "Magere kwark 1kg"
+   },
+   "cottage": {
+    "price": 0.79,
+    "size": 200.0,
+    "label": "Cottage cheese"
+   },
+   "tofu": {
+    "price": 1.3,
+    "size": 360.0,
+    "label": "Tofu"
+   },
+   "wraps": {
+    "price": 0.94,
+    "size": 8,
+    "label": "Wraps 8x20cm"
+   },
+   "stokbrood": {
+    "price": 0.99,
+    "size": 300.0,
+    "label": "Steenoven baguette meergranen"
+   },
+   "pasta": {
+    "price": 0.76,
+    "size": 500.0,
+    "label": "Penne Rigate"
+   },
+   "rijst": {
+    "price": 1.79,
+    "size": 500.0,
+    "label": "Basmatirijst"
+   },
+   "mie": {
+    "price": 0.79,
+    "size": 250.0,
+    "label": "Medium ei noedels 4%"
+   },
+   "rodelinzen": {
+    "price": 1.49,
+    "size": 500,
+    "label": "Rode linzen"
+   },
+   "spliterwten": {
+    "price": 2.19,
+    "size": 900.0,
+    "label": "Groene spliterwten"
+   },
+   "havermout": {
+    "price": 0.74,
+    "size": 500.0,
+    "label": "Havermout grove vlokken"
+   },
+   "walnoten": {
+    "price": 2.59,
+    "size": 200.0,
+    "label": "Californische walnoten"
+   },
+   "tomatenblokjes": {
+    "price": 1.29,
+    "size": 400.0,
+    "label": "Tomatenblokjes"
+   },
+   "tomatenpuree": {
+    "price": 0.99,
+    "size": 208.0,
+    "label": "Tomatenpuree"
+   },
+   "kidneybonen": {
+    "price": 0.59,
+    "size": 255.0,
+    "label": "Kidneybonen"
+   },
+   "kikkererwten": {
+    "price": 0.9,
+    "size": 400.0,
+    "label": "Kikkererwten"
+   },
+   "linzen": {
+    "price": 0.95,
+    "size": 400.0,
+    "label": "Linzen"
+   },
+   "mais": {
+    "price": 1.19,
+    "size": 285,
+    "label": "Maïs"
+   },
+   "kokosmelk": {
+    "price": 2.33,
+    "size": 400.0,
+    "label": "Kokosmelk"
+   },
+   "tonijn": {
+    "price": 1.79,
+    "size": 150.0,
+    "label": "Tonijn naturel MSC"
+   },
+   "pindakaas": {
+    "price": 1.38,
+    "size": 600.0,
+    "label": "Pindakaas"
+   },
+   "sojasaus": {
+    "price": 1.29,
+    "size": 150.0,
+    "label": "Sojasaus"
+   },
+   "pesto": {
+    "price": 1.15,
+    "size": 190.0,
+    "label": "Pesto genovese"
+   },
+   "hummus": {
+    "price": 1.28,
+    "size": 200.0,
+    "label": "Hummus"
+   },
+   "honing": {
+    "price": 1.99,
+    "size": 350.0,
+    "label": "Florimel Honing"
+   },
+   "spinazie": {
+    "price": 1.79,
+    "size": 450.0,
+    "label": "Spinazie"
+   },
+   "garnalen": {
+    "price": 5.99,
+    "size": 400.0,
+    "label": "Argentijnse garnalen"
+   }
+  }
+ }
+}
