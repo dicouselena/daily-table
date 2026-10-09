@@ -87,7 +87,7 @@ h3{font-size:20px}
 .linkbtn{background:none;border:0;padding:0;color:var(--accent);text-decoration:underline;text-underline-offset:3px;font-size:13px}
 .field{display:flex;flex-direction:column;gap:4px}
 .field label,.lbl{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-input[type=number],input[type=text],select,textarea{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%;min-width:0}
+input[type=number],input[type=text],input[type=search],select,textarea{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%;min-width:0}
 textarea{min-height:92px;resize:vertical}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:380px){.grid2{grid-template-columns:1fr}}
@@ -216,18 +216,67 @@ textarea{min-height:92px;resize:vertical}
 
 .brand .logo{display:inline-block;height:38px;width:calc(38px * var(--lr));background:var(--accent);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;flex:none}
 
-.thumb{flex:none;width:52px;height:52px;border-radius:10px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--accent);overflow:hidden;background:var(--bg)}
-.thumb svg{width:34px;height:34px}.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb{flex:none;width:64px;height:64px;border-radius:10px;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;color:var(--accent);overflow:hidden;background:var(--bg)}
+.thumb svg{width:100%;height:100%}.thumb img{width:100%;height:100%;object-fit:cover}
 .nm2{display:flex;gap:12px;align-items:flex-start}.nm2>div{min-width:0}
 .swcard{margin:18px 0;padding:26px 22px;border:1px solid var(--line);border-radius:18px;background:var(--bg);touch-action:pan-y;user-select:none;transition:transform .15s,opacity .15s;text-align:center}
 .swcard h3{font-size:28px;margin:6px 0 10px}
 .swcard .slot-meta{justify-content:center}
-.swart{width:96px;height:96px;margin:0 auto 10px;color:var(--accent)}.swart svg{width:100%;height:100%;stroke-width:1.2}
+.swart{width:150px;height:150px;margin:0 auto 10px;color:var(--accent)}.swart svg{width:100%;height:100%;stroke-width:1.2}
 .swbtns{display:flex;gap:12px;justify-content:center;margin-bottom:12px}
 .photo-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
 .photo-row img{width:120px;height:90px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
 .filebtn{display:inline-block;cursor:pointer;color:var(--accent);text-decoration:underline;font-size:14px}
 .filebtn input{position:absolute;opacity:0;width:1px;height:1px}
+
+/* ---- herontwerp: flow, kaarten, beweging ---- */
+:root{--ease:cubic-bezier(.22,.8,.3,1);--shadow:0 1px 2px rgba(43,21,25,.06),0 8px 24px rgba(43,21,25,.07)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes popin{from{opacity:0;transform:scale(.94) translateY(10px)}to{opacity:1;transform:none}}
+main.enter>*{animation:rise .5s var(--ease) both}
+main.enter>*:nth-child(2){animation-delay:.05s}main.enter>*:nth-child(3){animation-delay:.1s}main.enter>*:nth-child(4){animation-delay:.15s}main.enter>*:nth-child(n+5){animation-delay:.2s}
+@media (prefers-reduced-motion:reduce){main.enter>*,.pop{animation:none!important}*{transition:none!important}}
+.chip,.btn,.opt,.roundbtn,.ic,.tab{transition:background .2s,color .2s,border-color .2s,transform .15s var(--ease)}
+.chip:active,.btn:active,.opt:active{transform:scale(.96)}
+.btn.big{width:100%;padding:14px 20px;font-size:16px;box-shadow:var(--shadow)}
+main.ob{padding-bottom:20px}
+.lead{font-size:15px;color:var(--muted);margin:8px 0 0}
+.prog{margin:18px 0 22px}.prog-top{display:flex;justify-content:space-between;align-items:center;min-height:22px;margin-bottom:8px}
+.prog .bar{height:3px;margin:0}.prog .bar>span{transition:width .5s var(--ease)}
+.opts{display:grid;gap:8px}
+.opt{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.opt b{font-family:var(--serif);font-size:21px;font-weight:500}.opt span{font-size:13px;color:var(--muted)}
+.opt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}.opt[aria-pressed="true"] span{color:var(--accent-ink);opacity:.8}
+.swstack{margin:14px 0 6px;perspective:900px}
+.swcard{padding:0;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);text-align:left;margin:0;touch-action:pan-y;cursor:grab;transition:none}
+.swcard.pop{animation:popin .4s var(--ease) both}
+.swvis{position:relative;height:250px;background:linear-gradient(160deg,var(--accent-soft),var(--sand));display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.swvis>svg{width:200px;height:200px;stroke-width:1.1}.swvis img{width:100%;height:100%;object-fit:cover}
+.swinfo{padding:16px 20px 20px}.swinfo h3{font-size:30px;margin:4px 0 8px}.swinfo .slot-meta{justify-content:flex-start}
+.stamp{position:absolute;top:18px;padding:4px 14px;border:2px solid;border-radius:8px;font-family:var(--serif);font-size:24px;letter-spacing:.08em;text-transform:uppercase;opacity:0;pointer-events:none;background:var(--surface)}
+.stamp.yes{left:16px;color:var(--ok);transform:rotate(-10deg)}.stamp.no{right:16px;color:var(--warn);transform:rotate(10deg)}
+.swbtns{display:flex;gap:28px;justify-content:center;margin:18px 0}
+.roundbtn{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-size:24px;box-shadow:var(--shadow)}
+.roundbtn.yes{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}.roundbtn:active{transform:scale(.92)}
+/* menu */
+.cfgbar{margin-top:16px}
+.cfgsum{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;text-align:left;font-size:14px}
+.cfgsum b{font-weight:500;color:var(--accent);font-size:13px;white-space:nowrap}
+.cfg{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px 16px;margin-top:8px;animation:rise .35s var(--ease)}
+.day{margin-top:30px}.day>h3{border-bottom:0;padding-bottom:0;margin-bottom:10px;font-size:26px}
+.slot.card{padding:0;border:1px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden;margin-bottom:14px;animation:rise .5s var(--ease) both}
+.cvis{position:relative;height:150px;background:linear-gradient(160deg,var(--accent-soft),var(--sand));display:flex;align-items:center;justify-content:center;color:var(--accent);cursor:pointer;overflow:hidden}
+.cvis>svg{width:130px;height:130px;stroke-width:1.1}.cvis img{width:100%;height:100%;object-fit:cover}
+.cmeal{position:absolute;left:12px;top:12px;background:var(--surface);color:var(--ink);border-radius:999px;padding:3px 11px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.ctools{position:absolute;right:8px;top:8px;display:flex;gap:4px}
+.ctools .ic{background:var(--surface);border-radius:50%;padding:8px;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.15)}.ctools .ic.on{color:var(--accent)}
+.cbody{padding:14px 16px 16px}.cbody.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cbody .slot-name{display:block;background:none;border:0;padding:0;text-align:left;font-size:24px}
+.slot-more{padding-left:0;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);animation:rise .35s var(--ease)}
+.slot.done .cvis{opacity:.7}
+.tab{transition:color .2s,border-color .2s}
+.toast{animation:popin .3s var(--ease)}
 
 </style>
 </head>
@@ -1442,7 +1491,7 @@ const EMBED = {
 };
 const MEALS = ['ontbijt', 'lunch', 'diner'];
 const MEAL_NL = { ontbijt: 'Ontbijt', lunch: 'Lunch', diner: 'Diner' };
-const THR = { v: 8, e: 25 };
+const THR = { v: 8, e: 25, k: 450 };
 const HALAL_FACTOR = 1.1;
 const MAX_PROFILES = 5;
 const UNIT_NL = { g: 'g', ml: 'ml', st: 'st', sn: 'sneden', teen: 'tenen' };
@@ -1472,6 +1521,10 @@ function prepRecipe(D, r) {
   r.vegan = !r.animal;
 }
 
+function goalsOf(P) {
+  if (Array.isArray(P.goals)) return P.goals;
+  return P.nutri === 'vezel' ? ['vezel'] : P.nutri === 'eiwit' ? ['eiwit'] : P.nutri === 'beide' ? ['vezel', 'eiwit'] : [];
+}
 function eligible(D, P, meal) {
   let list = D.recipes.filter((r) => r.meals.indexOf(meal) >= 0);
   const steps = [];
@@ -1482,9 +1535,10 @@ function eligible(D, P, meal) {
   if (P.vegan) f('veganistisch', (r) => r.vegan); else if (P.veg) f('vegetarisch', (r) => r.veg);
   if (P.halal) f('halal', (r) => !r.pork);
   if (P.maxTijd) f('kooktijd', (r) => r.t <= P.maxTijd);
-  if (P.nutri === 'vezel') f('vezelrijk', (r) => r.v != null && r.v >= THR.v);
-  if (P.nutri === 'eiwit') f('eiwitrijk', (r) => r.e != null && r.e >= THR.e);
-  if (P.nutri === 'beide') f('vezel- en eiwitrijk', (r) => r.v != null && r.e != null && r.v >= THR.v && r.e >= THR.e);
+  const G = goalsOf(P);
+  if (G.indexOf('kcal') >= 0) f('caloriearm', (r) => r.kcal != null && r.kcal <= THR.k);
+  if (G.indexOf('eiwit') >= 0) f('eiwitrijk', (r) => r.e != null && r.e >= THR.e);
+  if (G.indexOf('vezel') >= 0) f('vezelrijk', (r) => r.v != null && r.v >= THR.v);
   return { list, steps };
 }
 
@@ -1867,48 +1921,95 @@ const ART = {
 };
 function artSVG(r) {
   const k = ART[r.cat] ? r.cat : 'vega';
-  return '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ART[k] + '</svg>';
+  let h = 0; for (let i = 0; i < r.id.length; i++) h = (h * 31 + r.id.charCodeAt(i)) % 997;
+  const op = [0.10, 0.16, 0.22][h % 3]; const off = (h % 5) - 2;
+  return '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="' + (32 + off) + '" cy="32" r="29" fill="currentColor" fill-opacity="' + op + '" stroke="none"/><circle cx="32" cy="32" r="29" stroke-opacity=".35" stroke-width=".8"/>' + ART[k] + '</svg>';
 }
 function thumbHTML(r) {
   const ph = ST.photos && ST.photos[r.id];
   return '<span class="thumb">' + (ph ? '<img alt="" src="' + esc(ph) + '">' : artSVG(r)) + '</span>';
 }
 
+function visHTML(r) {
+  const ph = ST.photos && ST.photos[r.id];
+  return ph ? '<img alt="" src="' + esc(ph) + '">' : artSVG(r);
+}
+
 /* ---------- smaakprofiel ---------- */
 function applyTaste() { setTaste(ST.taste, D); }
 
 function buildQueue() {
-  const P = activeP(); const q = [];
+  const P = activeP(); const per = { ontbijt: 4, lunch: 4, diner: 7 }; const q = [];
   ['ontbijt', 'lunch', 'diner'].forEach((m) => {
     const list = eligible(D, P, m).list.filter((r) => !r.own).slice();
     for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = list[i]; list[i] = list[j]; list[j] = t; }
     const seen = {}; const pick = [];
-    list.forEach((r) => { if (pick.length < 4 && !seen[r.cat]) { seen[r.cat] = 1; pick.push(r); } });
-    list.forEach((r) => { if (pick.length < 4 && pick.indexOf(r) < 0) pick.push(r); });
-    pick.forEach((r) => { if (!q.some((x) => x.id === r.id)) q.push(r); });
+    list.forEach((r) => { if (pick.length < per[m] && !seen[r.cat] && q.indexOf(r.id) < 0) { seen[r.cat] = 1; pick.push(r); } });
+    list.forEach((r) => { if (pick.length < per[m] && pick.indexOf(r) < 0 && q.indexOf(r.id) < 0) pick.push(r); });
+    pick.forEach((r) => q.push(r.id));
   });
-  return q.map((r) => r.id);
+  if (q.length < 15) { const P2 = Object.assign({}, P, { goals: [], maxTijd: null }); const ok = {}; ['ontbijt', 'lunch', 'diner'].forEach((m) => eligible(D, P2, m).list.forEach((r) => { ok[r.id] = r; })); const rest = Object.keys(ok).map((k) => ok[k]).filter((r) => !r.own && q.indexOf(r.id) < 0); while (q.length < 15 && rest.length) q.push(rest.splice(Math.floor(Math.random() * rest.length), 1)[0].id); }
+  for (let i = q.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = q[i]; q[i] = q[j]; q[j] = t; }
+  return q.slice(0, 15);
+}
+
+const STEPS_TOTAL = 5;
+function progressHTML(n, back) {
+  return '<div class="prog"><div class="prog-top">' + (back ? '<button class="linkbtn" data-a="setupback">‹ Terug</button>' : '<span></span>') + '<span class="cap">Stap ' + n + ' van ' + STEPS_TOTAL + '</span></div><div class="bar"><span style="width:' + Math.round(n / STEPS_TOTAL * 100) + '%"></span></div></div>';
+}
+function setupHTML() {
+  const P = activeP(); const pg = UI.sw.p || 0;
+  const tijd = [['', 'Geen limiet'], ['15', '15 min'], ['30', '30 min'], ['45', '45 min'], ['60', '60 min']].map((o) => '<button class="chip" data-a="pfieldset" data-f="maxTijd" data-v="' + o[0] + '" aria-pressed="' + (String(P.maxTijd || '') === o[0]) + '">' + o[1] + '</button>').join('');
+  const goals = [['kcal', 'Caloriearm', 'Lichter eten'], ['eiwit', 'Eiwitrijk', 'Vullend en sterk'], ['vezel', 'Vezelrijk', 'Goed voor je darmen']].map((o) => '<button class="opt" data-a="goal" data-v="' + o[0] + '" aria-pressed="' + (goalsOf(P).indexOf(o[0]) >= 0) + '"><b>' + o[1] + '</b><span>' + o[2] + '</span></button>').join('');
+  const stores = D.stores.map((st) => '<button class="chip" data-a="pfieldset" data-f="store" data-v="' + st.id + '" aria-pressed="' + (P.store === st.id) + '">' + esc(st.naam) + '</button>').join('');
+  const days = [1, 2, 3, 4, 5, 6, 7].map((n) => '<button class="chip" data-a="pfieldset" data-f="days" data-v="' + n + '" aria-pressed="' + (P.days === n) + '">' + n + '</button>').join('');
+  let body;
+  if (pg === 0) {
+    body = '<h2>Wat heb je in huis?</h2><p class="lead">Kies de apparaten die je hebt of wilt gebruiken. Je mag er zoveel kiezen als je wilt.</p>'
+      + '<div class="sec">' + chips('appliances', P.appliances, D.appliances) + '</div>'
+      + '<div class="sec"><span class="cap">Allergieën</span>' + chips('allergies', P.allergies, D.allergens) + '<p class="small">Geen allergieën? Dan sla je dit over.</p></div>';
+  } else if (pg === 1) {
+    body = '<h2>Hoe wil je eten?</h2><p class="lead">Kies wat bij je past, of laat alles leeg.</p>'
+      + '<div class="sec"><span class="cap">Dieet</span><div class="seg">' + bool('halal', 'Halal', P.halal) + bool('veg', 'Vegetarisch', P.veg) + bool('vegan', 'Veganistisch', P.vegan) + '</div></div>'
+      + '<div class="sec"><span class="cap">Waar let je op? Kies er een of meer</span><div class="opts">' + goals + '</div></div>'
+      + '<div class="sec"><span class="cap">Maximale kooktijd</span><div class="seg">' + tijd + '</div></div>';
+  } else {
+    body = '<h2>Jouw week</h2><p class="lead">Dit is je standaard. Per menu kun je het altijd aanpassen.</p>'
+      + '<div class="sec"><span class="cap">Maaltijden</span>' + chips('meals', P.meals, MEALS.map((m) => [m, MEAL_NL[m]])) + '</div>'
+      + '<div class="sec"><span class="cap">Aantal dagen</span><div class="seg">' + days + '</div></div>'
+      + '<div class="sec grid2"><div class="field"><label for="p-pers">Personen</label><input id="p-pers" type="number" min="1" max="8" inputmode="numeric" value="' + P.personen + '" data-a="pfield" data-f="personen"></div>'
+      + '<div class="field"><label for="p-bud">Budget (€)</label><input id="p-bud" type="number" min="0" inputmode="decimal" value="' + P.budget + '" data-a="pfield" data-f="budget"></div></div>'
+      + '<div class="sec"><span class="cap">Winkel</span><div class="seg">' + stores + '</div></div>';
+  }
+  return progressHTML(pg + 1, pg > 0) + body
+    + '<div class="actions sec"><button class="btn primary big" data-a="setupnext">' + (pg < 2 ? 'Verder' : 'Verder naar je smaak') + '</button></div>';
 }
 
 function tasteHTML() {
   const T = ST.taste; const sw = UI.sw;
+  if (sw.step === 'setup') return setupHTML();
   if (sw.step === 'nope') {
-    const ings = D.ingredients.filter((i) => !i.pantry && !i.cp).sort((a, b) => a.naam.localeCompare(b.naam));
-    const chips = ings.map((i) => '<button class="chip" data-a="nopetog" data-v="' + i.id + '" aria-pressed="' + (T.nopeIng.indexOf(i.id) >= 0) + '">' + esc(i.naam) + '</button>').join('');
-    return '<div class="sec"><h2>Wat eet je echt niet?</h2><p class="small">Gerechten met deze ingrediënten komen nooit in je menu. Je past dit altijd aan bij Profiel.</p></div><div class="seg">' + chips + '</div>'
+    const groups = [['vis', 'Alle vis', (i) => i.fl.indexOf('fish') >= 0], ['vlees', 'Alle vlees', (i) => i.fl.indexOf('meat') >= 0 && i.fl.indexOf('fish') < 0], ['varken', 'Varkensvlees', (i) => i.fl.indexOf('pork') >= 0], ['ei', 'Ei', (i) => i.id === 'ei'], ['zuivel', 'Zuivel', (i) => i.dept === 'zuivel' && i.id !== 'ei' && i.id !== 'tofu']];
+    const gChips = groups.map((g) => { const ids = D.ingredients.filter((i) => !i.pantry && !i.cp && g[2](i)).map((i) => i.id); const on = ids.length && ids.every((x) => T.nopeIng.indexOf(x) >= 0); return '<button class="chip" data-a="nopegroup" data-v="' + g[0] + '" aria-pressed="' + !!on + '">' + g[1] + '</button>'; }).join('');
+    const quick = ['champignon', 'spinazie', 'paprika', 'komkommer', 'tofu', 'kikkererwten', 'courgette', 'avocado'].filter((id) => D.ing[id]).map((id) => '<button class="chip" data-a="nopetog" data-v="' + id + '" aria-pressed="' + (T.nopeIng.indexOf(id) >= 0) + '">' + esc(D.ing[id].naam) + '</button>').join('');
+    const chosen = T.nopeIng.map((id) => '<button class="chip" data-a="nopetog" data-v="' + id + '" aria-pressed="true">' + esc(D.ing[id] ? D.ing[id].naam : id) + ' ×</button>').join('');
+    return '<div class="sec">' + progressHTML(5, false) + '<h2>Wat eet je echt niet?</h2><p class="small">Gerechten met deze ingrediënten komen nooit in je menu. Je kunt dit altijd aanpassen bij Profiel. Heb je geen bezwaren, ga dan meteen verder.</p></div>'
+      + '<div class="sec"><span class="cap">Typ een ingrediënt</span><input id="nopeq" type="search" autocomplete="off" placeholder="bijvoorbeeld champignons" data-a="nopeq" aria-label="Zoek een ingrediënt"><div id="sugg" class="seg" style="margin-top:8px"></div></div>'
+      + '<div class="sec"><span class="cap">Veel gekozen</span><div class="seg">' + gChips + quick + '</div></div>'
+      + (chosen ? '<div class="sec"><span class="cap">Jouw lijst</span><div class="seg">' + chosen + '</div></div>' : '')
       + '<div class="actions sec"><button class="btn primary" data-a="swfinish">Klaar, maak mijn menu</button></div>';
   }
   const rid = sw.queue[sw.i]; const r = rid && D.rec[rid];
   if (!r) return '<div class="sec"><h2>Klaar met swipen</h2></div><div class="actions sec"><button class="btn primary" data-a="swnope">Verder</button></div>';
   const m = r.meals.map((x) => MEAL_NL[x].toLowerCase()).join(' of ');
-  return '<div class="sec"><span class="cap">' + (sw.i + 1) + ' van ' + sw.queue.length + '</span><h2>Wat vind je lekker?</h2><p class="small">Swipe naar rechts voor lekker, naar links voor niet voor mij. Zo leert de app je smaak kennen.</p></div>'
-    + '<div class="swcard" id="swcard" tabindex="0"><div class="swart">' + artSVG(r) + '</div><div class="cap">' + esc(m) + '</div><h3>' + esc(r.naam) + '</h3><div class="slot-meta"><span>' + timeText(r) + '</span></div><div class="slot-meta">' + tagsFor(r, activeP()) + '</div></div>'
-    + '<div class="swbtns"><button class="btn" data-a="swno">Niet voor mij</button><button class="btn primary" data-a="swlike">Lekker</button></div>'
+  return progressHTML(4, false) + '<div class="sec"><span class="cap">' + (sw.i + 1) + ' van ' + sw.queue.length + '</span><h2>Wat vind je lekker?</h2><p class="small">Swipe naar rechts voor lekker, naar links voor niet voor mij. Zo leert de app je smaak kennen.</p></div>'
+    + '<div class="swstack"><div class="swcard" id="swcard" tabindex="0"><div class="swvis">' + visHTML(r) + '<span class="stamp yes" id="stY">Lekker</span><span class="stamp no" id="stN">Niet</span></div><div class="swinfo"><div class="cap">' + esc(m) + '</div><h3>' + esc(r.naam) + '</h3><div class="slot-meta"><span>' + timeText(r) + '</span>' + (r.kcal ? '<span class="num">' + r.kcal + ' kcal</span>' : '') + '</div><div class="slot-meta">' + tagsFor(r, activeP()) + '</div></div></div></div>'
+    + '<div class="swbtns"><button class="roundbtn no" data-a="swno" aria-label="Niet voor mij">✕</button><button class="roundbtn yes" data-a="swlike" aria-label="Lekker">♥</button></div>'
     + '<div class="actions"><button class="linkbtn" data-a="swnever">Dit eet ik echt niet, nooit meer tonen</button><button class="linkbtn" data-a="swnope">Sla de rest over</button></div>';
 }
 
 function startTaste() {
-  UI.sw = { queue: buildQueue(), i: 0, step: 'swipe' };
+  UI.sw = { queue: [], i: 0, step: 'setup', p: 0 };
   UI.tab = 'smaak';
 }
 function tasteNext() { UI.sw.i++; if (UI.sw.i >= UI.sw.queue.length) UI.sw.step = 'nope'; render(); }
@@ -1921,8 +2022,19 @@ function tasteAct(a, ds) {
     case 'swnever': { const id = UI.sw.queue[UI.sw.i]; if (T.never.indexOf(id) < 0) T.never.push(id); applyTaste(); save(); tasteNext(); return true; }
     case 'swnope': UI.sw.step = 'nope'; render(); return true;
     case 'nopetog': { const i = T.nopeIng.indexOf(ds.v); if (i >= 0) T.nopeIng.splice(i, 1); else T.nopeIng.push(ds.v); applyTaste(); save(); render(); return true; }
+    case 'nopegroup': {
+      const def = { vis: (i) => i.fl.indexOf('fish') >= 0, vlees: (i) => i.fl.indexOf('meat') >= 0 && i.fl.indexOf('fish') < 0, varken: (i) => i.fl.indexOf('pork') >= 0, ei: (i) => i.id === 'ei', zuivel: (i) => i.dept === 'zuivel' && i.id !== 'ei' && i.id !== 'tofu' }[ds.v];
+      const ids = D.ingredients.filter((i) => !i.pantry && !i.cp && def(i)).map((i) => i.id);
+      const all = ids.every((x) => T.nopeIng.indexOf(x) >= 0);
+      if (all) T.nopeIng = T.nopeIng.filter((x) => ids.indexOf(x) < 0); else ids.forEach((x) => { if (T.nopeIng.indexOf(x) < 0) T.nopeIng.push(x); });
+      applyTaste(); save(); render(); return true;
+    }
+    case 'setupnext': if ((UI.sw.p || 0) < 2) { UI.sw.p = (UI.sw.p || 0) + 1; render(); window.scrollTo(0, 0); return true; } UI.sw.queue = buildQueue(); UI.sw.i = 0; UI.sw.step = UI.sw.queue.length ? 'swipe' : 'nope'; save(); render(); window.scrollTo(0, 0); return true;
+    case 'setupback': UI.sw.p = Math.max(0, (UI.sw.p || 0) - 1); render(); window.scrollTo(0, 0); return true;
+    case 'pfieldset': updP((p) => { p[ds.f] = ds.f === 'store' ? ds.v : (ds.v ? parseInt(ds.v, 10) : null); }); return true;
+    case 'setupdone': UI.sw.queue = buildQueue(); UI.sw.i = 0; UI.sw.step = UI.sw.queue.length ? 'swipe' : 'nope'; save(); render(); window.scrollTo(0, 0); return true;
     case 'swfinish': T.done = true; UI.tab = 'menu'; applyTaste(); newPlan(); save(); render(); window.scrollTo(0, 0); return true;
-    case 'tasteagain': startTaste(); render(); window.scrollTo(0, 0); return true;
+    case 'tasteagain': UI.sw = { queue: buildQueue(), i: 0, step: 'swipe' }; UI.tab = 'smaak'; render(); window.scrollTo(0, 0); return true;
     case 'tastenope': UI.sw = { queue: [], i: 0, step: 'nope' }; UI.tab = 'smaak'; render(); return true;
     case 'neverclear': T.never = []; T.disliked = []; applyTaste(); save(); render(); return true;
     case 'neverdel': T.never = T.never.filter((x) => x !== ds.v); applyTaste(); save(); render(); return true;
@@ -1943,17 +2055,30 @@ function tasteSummaryHTML() {
 /* swipen met de vinger of muis */
 (function () {
   let sx = null; let card = null;
-  document.addEventListener('pointerdown', (e) => { const c = e.target.closest && e.target.closest('#swcard'); if (c) { card = c; sx = e.clientX; try { c.setPointerCapture(e.pointerId); } catch (x) { /* ok */ } } });
-  document.addEventListener('pointermove', (e) => { if (card && sx != null) { const dx = e.clientX - sx; card.style.transform = 'translateX(' + dx + 'px) rotate(' + dx / 25 + 'deg)'; card.style.opacity = String(1 - Math.min(0.5, Math.abs(dx) / 400)); } });
+  function fly(dir, fn) {
+    const c = document.getElementById('swcard');
+    if (!c) { fn(); return; }
+    c.style.transition = 'transform .28s ease-in, opacity .28s ease-in';
+    c.style.transform = 'translateX(' + (dir * 520) + 'px) rotate(' + (dir * 22) + 'deg)'; c.style.opacity = '0';
+    setTimeout(fn, 230);
+  }
+  window.swipeAct = function (a) { fly(a === 'swlike' ? 1 : -1, () => act(a, {}, null)); };
+  document.addEventListener('pointerdown', (e) => { const c = e.target.closest && e.target.closest('#swcard'); if (c) { card = c; sx = e.clientX; c.style.transition = 'none'; try { c.setPointerCapture(e.pointerId); } catch (x) { /* ok */ } } });
+  document.addEventListener('pointermove', (e) => {
+    if (!card || sx == null) return;
+    const dx = e.clientX - sx; card.style.transform = 'translateX(' + dx + 'px) rotate(' + dx / 22 + 'deg)';
+    const y = document.getElementById('stY'); const n = document.getElementById('stN');
+    if (y) y.style.opacity = String(Math.max(0, Math.min(1, dx / 90))); if (n) n.style.opacity = String(Math.max(0, Math.min(1, -dx / 90)));
+  });
   const end = (e) => {
     if (!card || sx == null) return;
     const dx = e.clientX - sx; const c = card; card = null; sx = null;
-    if (dx > 90) act('swlike', {}, null); else if (dx < -90) act('swno', {}, null);
-    else { c.style.transform = ''; c.style.opacity = ''; }
+    if (dx > 90) swipeAct('swlike'); else if (dx < -90) swipeAct('swno');
+    else { c.style.transition = 'transform .25s'; c.style.transform = ''; const y = document.getElementById('stY'); const n = document.getElementById('stN'); if (y) y.style.opacity = '0'; if (n) n.style.opacity = '0'; }
   };
   document.addEventListener('pointerup', end);
   document.addEventListener('pointercancel', end);
-  document.addEventListener('keydown', (e) => { if (UI.tab === 'smaak' && UI.sw && UI.sw.step === 'swipe') { if (e.key === 'ArrowRight') act('swlike', {}, null); else if (e.key === 'ArrowLeft') act('swno', {}, null); } });
+  document.addEventListener('keydown', (e) => { if (UI.tab === 'smaak' && UI.sw && UI.sw.step === 'swipe') { if (e.key === 'ArrowRight') swipeAct('swlike'); else if (e.key === 'ArrowLeft') swipeAct('swno'); } });
 })();
 
 /* eigen foto bij een gemaakt gerecht */
@@ -1976,6 +2101,22 @@ document.addEventListener('change', (e) => {
   fr.readAsDataURL(f);
 });
 
+/* zoeken in "wat eet je niet": alleen de suggesties vernieuwen, zodat het toetsenbord open blijft */
+document.addEventListener('input', (e) => {
+  const el = e.target;
+  if (!el || el.id !== 'nopeq') return;
+  const box = document.getElementById('sugg'); if (!box) return;
+  const q = el.value.trim().toLowerCase(); box.textContent = '';
+  if (q.length < 2) return;
+  const hits = D.ingredients.filter((i) => !i.pantry && !i.cp && i.naam.toLowerCase().indexOf(q) >= 0).slice(0, 8);
+  if (!hits.length) { const p = document.createElement('span'); p.className = 'small'; p.textContent = 'Geen ingrediënt gevonden met "' + el.value.trim() + '".'; box.appendChild(p); return; }
+  hits.forEach((i) => {
+    const b = document.createElement('button'); b.className = 'chip'; b.type = 'button';
+    b.setAttribute('data-a', 'nopetog'); b.setAttribute('data-v', i.id); b.setAttribute('aria-pressed', String(ST.taste.nopeIng.indexOf(i.id) >= 0));
+    b.textContent = i.naam; box.appendChild(b);
+  });
+});
+
 const KEY = 'dailytable.v1';
 const APP = document.getElementById('app');
 let D = null;
@@ -1996,7 +2137,7 @@ const pad = (n) => (n < 10 ? '0' : '') + n;
 function todayISO() { const d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
 
 function defaultProfile(naam) {
-  return { id: uid(), naam: naam || 'Mijn standaard', personen: 2, budget: 70, days: 5, meals: ['diner'], appliances: ['fornuis', 'oven', 'magnetron'], allergies: [], veg: false, vegan: false, halal: false, nutri: 'geen', maxTijd: null, store: 'ah', favBoost: true, vezelDoel: 30, eiwitDoel: 55 };
+  return { id: uid(), naam: naam || 'Mijn standaard', personen: 2, budget: 70, days: 5, meals: ['diner'], appliances: ['fornuis', 'oven', 'magnetron'], allergies: [], veg: false, vegan: false, halal: false, goals: [], maxTijd: null, store: 'ah', favBoost: true, vezelDoel: 30, eiwitDoel: 55 };
 }
 
 function load() {
@@ -2098,10 +2239,8 @@ function dayLabel(i) {
 
 function slotHTML(s, idx, P, pl) {
   const r = s.rid ? D.rec[s.rid] : null;
-  const head = '<span class="cap">' + MEAL_NL[s.meal] + '</span>';
   if (!r) {
-    return '<div class="slot skipped"><div class="slot-head">' + head + '<div class="slot-name">Overgeslagen</div>'
-      + '<div class="slot-tools"><button class="btn sm" data-a="add" data-i="' + idx + '">Toevoegen</button></div></div></div>';
+    return '<div class="slot card skipped"><div class="cbody row"><div><span class="cap">' + MEAL_NL[s.meal] + '</span><div class="slot-name">Overgeslagen</div></div><button class="btn sm" data-a="add" data-i="' + idx + '">Toevoegen</button></div></div>';
   }
   const fav = ST.favs.indexOf(r.id) >= 0;
   const cost = recipeCost(D, PRICES, pl.store, r.id, pl.persons, P.halal);
@@ -2117,13 +2256,13 @@ function slotHTML(s, idx, P, pl) {
       + '<div><div class="cap">Bereiding</div><ol>' + steps + '</ol></div>' + al + halalNote
       + '<label class="donebox"><input type="checkbox" data-a="done" data-i="' + idx + '"' + (s.done ? ' checked' : '') + '> Gemaakt</label>' + prompt + photoHTML(r, s) + '</div>';
   }
-  return '<div class="slot' + (s.done ? ' done' : '') + '"><div class="slot-head">' + head
-    + '<div class="nm2">' + thumbHTML(r) + '<div><button class="namebtn slot-name" data-a="open" data-i="' + idx + '" aria-expanded="' + open + '">' + esc(r.naam) + '</button>'
-    + '<div class="slot-meta"><span>' + timeText(r) + '</span><span class="num">≈ ' + eur(cost) + '</span>' + (r.kcal ? '<span class="num">' + r.kcal + ' kcal p.p.</span>' : '') + '</div>'
-    + '<div class="slot-meta">' + tagsFor(r, P) + '</div></div></div>'
-    + '<div class="slot-tools"><button class="ic' + (fav ? ' on' : '') + '" data-a="fav" data-i="' + idx + '" aria-label="' + (fav ? 'Verwijder uit favorieten' : 'Zet bij favorieten') + '" aria-pressed="' + fav + '">' + ICON.heart + '</button>'
+  return '<div class="slot card' + (s.done ? ' done' : '') + '"><div class="cvis" data-a="open" data-i="' + idx + '">' + visHTML(r) + '<span class="cmeal">' + MEAL_NL[s.meal] + '</span>'
+    + '<div class="ctools"><button class="ic' + (fav ? ' on' : '') + '" data-a="fav" data-i="' + idx + '" aria-label="' + (fav ? 'Verwijder uit favorieten' : 'Zet bij favorieten') + '" aria-pressed="' + fav + '">' + ICON.heart + '</button>'
     + '<button class="ic" data-a="swap" data-i="' + idx + '" aria-label="Ander gerecht">' + ICON.swap + '</button>'
-    + '<button class="ic" data-a="remove" data-i="' + idx + '" aria-label="Maaltijd overslaan">' + ICON.x + '</button></div></div>' + more + '</div>';
+    + '<button class="ic" data-a="remove" data-i="' + idx + '" aria-label="Maaltijd overslaan">' + ICON.x + '</button></div></div>'
+    + '<div class="cbody"><button class="namebtn slot-name" data-a="open" data-i="' + idx + '" aria-expanded="' + open + '">' + esc(r.naam) + '</button>'
+    + '<div class="slot-meta"><span>' + timeText(r) + '</span><span class="num">≈ ' + eur(cost) + '</span>' + (r.kcal ? '<span class="num">' + r.kcal + ' kcal p.p.</span>' : '') + '</div>'
+    + '<div class="slot-meta">' + tagsFor(r, P) + '</div>' + more + '</div></div>';
 }
 
 function photoHTML(r, s) {
@@ -2159,11 +2298,16 @@ function menuHTML() {
     days += '<section class="day"><h3>' + esc(lab.main) + '<span>' + esc(lab.sub) + '</span></h3>' + rows + '</section>';
   }
   const anyRecipe = pl.slots.some((s) => s.rid);
-  return '<div class="sec"><span class="cap">Voor hoeveel dagen</span><div class="seg">' + dayBtns + '</div></div>'
-    + '<div class="sec"><span class="cap">Welke maaltijden</span><div class="seg">' + mealBtns + '</div></div>'
-    + '<div class="sec grid2"><div class="field"><label for="persons">Personen</label><input id="persons" type="number" min="1" max="8" value="' + pl.persons + '" data-a="persons"></div>'
-    + '<div class="field"><label for="budget">Budget dit menu (€)</label><input id="budget" type="number" min="0" step="1" value="' + (pl.budgetOverride != null ? pl.budgetOverride : auto) + '" data-a="budget"></div></div>'
-    + '<div class="actions sec"><button class="btn primary" data-a="new">Nieuw menu</button><button class="linkbtn" data-a="tofile">Bewaar dagen en maaltijden in dit profiel</button></div>'
+  const bud = pl.budgetOverride != null ? pl.budgetOverride : auto;
+  const summ = pl.cfg.days + (pl.cfg.days === 1 ? ' dag' : ' dagen') + ' · ' + pl.cfg.meals.map((m) => MEAL_NL[m].toLowerCase()).join(', ') + ' · ' + pl.persons + (pl.persons === 1 ? ' persoon' : ' personen') + ' · ' + eur(bud);
+  const cfg = UI.cfgOpen
+    ? '<div class="cfg"><div class="sec"><span class="cap">Voor hoeveel dagen</span><div class="seg">' + dayBtns + '</div></div>'
+      + '<div class="sec"><span class="cap">Welke maaltijden</span><div class="seg">' + mealBtns + '</div></div>'
+      + '<div class="sec grid2"><div class="field"><label for="persons">Personen</label><input id="persons" type="number" min="1" max="8" value="' + pl.persons + '" data-a="persons"></div>'
+      + '<div class="field"><label for="budget">Budget dit menu (€)</label><input id="budget" type="number" min="0" step="1" value="' + bud + '" data-a="budget"></div></div>'
+      + '<div class="actions sec"><button class="linkbtn" data-a="tofile">Bewaar dit in je profiel</button></div></div>' : '';
+  return '<div class="cfgbar"><button class="cfgsum" data-a="cfgtog" aria-expanded="' + !!UI.cfgOpen + '"><span>' + esc(summ) + '</span><b>' + (UI.cfgOpen ? 'Sluiten' : 'Aanpassen') + '</b></button>' + cfg + '</div>'
+    + '<div class="actions sec"><button class="btn primary" data-a="new">Nieuw menu</button></div>'
     + diagHTML() + (anyRecipe ? '<div class="sec"><span class="cap">Weekoverzicht</span>' + weekGridHTML() + '</div>' + days : '<div class="empty">Er zijn geen recepten die bij dit profiel passen.</div>' + days);
 }
 
@@ -2271,7 +2415,7 @@ function profielHTML() {
   const names = ST.profiles.map((p) => '<button class="chip" data-a="pick" data-v="' + p.id + '" aria-pressed="' + (ST.activeId === p.id) + '">' + esc(p.naam) + (p.id === ST.defaultId ? ' ★' : '') + '</button>').join('')
     + (TEMP ? '<button class="chip" data-a="pick" data-v="temp" aria-pressed="' + isTemp + '">Tijdelijk</button>' : '');
   const full = ST.profiles.length >= MAX_PROFILES;
-  const nutri = [['geen', 'Geen voorkeur'], ['vezel', 'Vezelrijk'], ['eiwit', 'Eiwitrijk'], ['beide', 'Beide']].map((o) => '<button class="chip" data-a="nutri" data-v="' + o[0] + '" aria-pressed="' + (P.nutri === o[0]) + '">' + o[1] + '</button>').join('');
+  const nutri = [['kcal', 'Caloriearm'], ['eiwit', 'Eiwitrijk'], ['vezel', 'Vezelrijk']].map((o) => '<button class="chip" data-a="goal" data-v="' + o[0] + '" aria-pressed="' + (goalsOf(P).indexOf(o[0]) >= 0) + '">' + o[1] + '</button>').join('');
   const tijd = [['', 'Geen limiet'], ['15', '15 min'], ['30', '30 min'], ['45', '45 min'], ['60', '60 min']].map((o) => '<option value="' + o[0] + '"' + (String(P.maxTijd || '') === o[0] ? ' selected' : '') + '>' + o[1] + '</option>').join('');
   const stores = D.stores.map((s) => '<option value="' + s.id + '"' + (P.store === s.id ? ' selected' : '') + '>' + esc(s.volledig) + '</option>').join('');
   const days = [1, 2, 3, 4, 5, 6, 7].map((n) => '<option value="' + n + '"' + (P.days === n ? ' selected' : '') + '>' + n + '</option>').join('');
@@ -2290,7 +2434,7 @@ function profielHTML() {
     + '<div class="sec"><span class="cap">Keukenapparaten</span>' + chips('appliances', P.appliances, D.appliances) + '</div>'
     + '<div class="sec"><span class="cap">Allergieën</span>' + chips('allergies', P.allergies, D.allergens) + '</div>'
     + '<div class="sec"><span class="cap">Dieet</span><div class="seg">' + bool('veg', 'Vegetarisch', P.veg) + bool('vegan', 'Veganistisch', P.vegan) + bool('halal', 'Halal', P.halal) + '</div></div>'
-    + '<div class="sec"><span class="cap">Voeding</span><div class="seg">' + nutri + '</div><p class="small">Vezelrijk is minimaal ' + THR.v + ' g en eiwitrijk minimaal ' + THR.e + ' g per portie. De waarden zijn schattingen.</p></div>'
+    + '<div class="sec"><span class="cap">Voeding</span><div class="seg">' + nutri + '</div><p class="small">Kies er een of meer. Caloriearm is maximaal ' + THR.k + ' kcal, eiwitrijk minimaal ' + THR.e + ' g en vezelrijk minimaal ' + THR.v + ' g per portie. De waarden zijn schattingen.</p></div>'
     + '<div class="sec grid2"><div class="field"><label for="p-vd">Vezeldoel per dag (g)</label><input id="p-vd" type="number" min="0" value="' + (P.vezelDoel || 30) + '" data-a="pfield" data-f="vezelDoel"></div>'
     + '<div class="field"><label for="p-ed">Eiwitdoel per dag (g)</label><input id="p-ed" type="number" min="0" value="' + (P.eiwitDoel || 55) + '" data-a="pfield" data-f="eiwitDoel"></div></div>'
     + '<div class="sec field"><label for="p-tijd">Maximale kooktijd per maaltijd</label><select id="p-tijd" data-a="pfield" data-f="maxTijd">' + tijd + '</select></div>'
@@ -2305,7 +2449,7 @@ function render() {
   if (!D || !ST) return;
   let body = '';
   const t = UI.tab;
-  if (t === 'smaak') { APP.innerHTML = '<header class="top"><div class="brand">' + LOGO + '<span>daily table<i>.</i></span></div></header><main>' + tasteHTML() + '</main>'; return; }
+  if (t === 'smaak') { const k = 'smaak' + UI.sw.step + (UI.sw.p || 0); const en = UI._k !== k; UI._k = k; APP.innerHTML = '<header class="top"><div class="brand">' + LOGO + '<span>daily table<i>.</i></span></div></header><main class="' + (en ? 'enter ' : '') + 'ob">' + tasteHTML() + '</main>'; if (UI.sw.step === 'swipe') { const c = document.getElementById('swcard'); if (c && UI._swk !== UI.sw.i) { c.classList.add('pop'); UI._swk = UI.sw.i; } } return; }
   if (t === 'menu') body = menuHTML();
   else if (t === 'lijst') body = listHTML();
   else if (t === 'inzicht') body = inzichtHTML();
@@ -2313,7 +2457,8 @@ function render() {
   else body = profielHTML();
   const tabs = [['menu', 'Menu'], ['lijst', 'Lijst'], ['inzicht', 'Inzicht'], ['recepten', 'Recepten'], ['profiel', 'Profiel']]
     .map((x) => '<button class="tab" role="tab" data-a="tab" data-v="' + x[0] + '" aria-selected="' + (t === x[0]) + '">' + x[1] + '</button>').join('');
-  APP.innerHTML = headerHTML() + '<main>' + body + '</main><nav class="tabs" role="tablist" aria-label="Onderdelen"><div class="tabs-in">' + tabs + '</div></nav>' + (UI.toast ? '<div class="toast" role="status">' + esc(UI.toast) + '</div>' : '');
+  const key = t + ':' + (UI.open ? '' : ''); const enter = UI._k !== t; UI._k = t;
+  APP.innerHTML = headerHTML() + '<main' + (enter ? ' class="enter"' : '') + '>' + body + '</main><nav class="tabs" role="tablist" aria-label="Onderdelen"><div class="tabs-in">' + tabs + '</div></nav>' + (UI.toast ? '<div class="toast" role="status">' + esc(UI.toast) + '</div>' : '');
 }
 
 function toast(msg) { UI.toast = msg; render(); setTimeout(() => { UI.toast = ''; render(); }, 1800); }
@@ -2353,6 +2498,7 @@ function saveDraft() {
 }
 
 function act(a, ds, el) {
+  if ((a === 'swlike' || a === 'swno') && ds.fly !== '0' && window.swipeAct && document.getElementById('swcard') && !UI._flying) { UI._flying = true; swipeAct(a); setTimeout(() => { UI._flying = false; }, 300); return; }
   if (tasteAct(a, ds)) return;
   const pl = ST.plan; const P = activeP(); const i = ds.i != null ? parseInt(ds.i, 10) : null;
   switch (a) {
@@ -2409,7 +2555,8 @@ function act(a, ds, el) {
     }
     case 'ptog': updP((p) => { if (ds.f === 'meals' && p.meals.length === 1 && p.meals[0] === ds.v) return; toggle(p[ds.f], ds.v); if (ds.f === 'meals') p.meals.sort((x, y) => MEALS.indexOf(x) - MEALS.indexOf(y)); }); break;
     case 'pbool': updP((p) => { p[ds.f] = !p[ds.f]; if (ds.f === 'vegan' && p.vegan) p.veg = true; }); break;
-    case 'nutri': updP((p) => { p.nutri = ds.v; }); break;
+    case 'cfgtog': UI.cfgOpen = !UI.cfgOpen; render(); break;
+    case 'goal': updP((p) => { p.goals = goalsOf(p).slice(); toggle(p.goals, ds.v); }); break;
     case 'export': UI.io = { text: JSON.stringify({ v: 1, profiles: ST.profiles, defaultId: ST.defaultId, favs: ST.favs, custom: ST.custom }), msg: 'Kopieer deze tekst en bewaar hem ergens veilig.' }; render(); break;
     case 'import': UI.io = { text: '', msg: 'Plak hier je back-up en kies importeren.' }; render(); break;
     case 'ioclose': UI.io = null; render(); break;
@@ -2512,6 +2659,7 @@ async function loadPrices() {
   if (!ST.custom) ST.custom = { ingredients: [], recipes: [] };
   if (!ST.favs) ST.favs = [];
   if (!ST.photos) ST.photos = {};
+  ST.profiles.forEach((p) => { if (!Array.isArray(p.goals)) p.goals = goalsOf(p).slice(); });
   if (!ST.taste) ST.taste = { done: false, liked: [], disliked: [], never: [], nopeIng: [] };
   ST.activeId = ST.defaultId;
   rebuild();
